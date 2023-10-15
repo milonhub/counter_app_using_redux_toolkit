@@ -1,4 +1,6 @@
 import React from 'react'
+
+import style from './counterView.module.css'
 import {useDispatch, useSelector} from 'react-redux'
 import { decrement, increment, incrementBy5, reset } from './counterSlice';
 
@@ -8,7 +10,11 @@ const CounterView = () => {
     const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className={style.counter_container}>
+         
+        <h2>Using Redux_oolkit</h2>
+        <h2>Counter App</h2>
+
         <h1>count: {count}</h1>
 
         <button onClick={()=> { 
